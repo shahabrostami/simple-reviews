@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shahabrostami</title>
+  <title>Simple Reviews</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+  <div class="header_menu">
+  <div class="user_menu">
+  <% if current_user %>
+  <ul class="inline">
+    <li><%= current_user.email %></li>
+    <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+  </ul>
+  <% else %>
+  <ul>
+    <li><%= link_to "Log in", 'login' %></li>
+    <li><%= link_to "Register", 'signup' %></li>
+  </lu>
+  <% end %>
+  </div>
+</div>
 </head>
 <body>
 

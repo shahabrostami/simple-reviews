@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+div.header_menu {
+  margin: 0px;
+  width: 100%;
+}
+div.user_menu {
+  margin-right: 0px;
+  margin-left: auto;
+  width: 20%;
+}
+
